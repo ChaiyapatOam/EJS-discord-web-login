@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const session = require('express-session');
 const {CLIENT_ID, CLIENT_SECRET, SESSION_SECRET, DEVELOPMENT} = require('./config.json');
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.set('view engine', 'ejs');
 
